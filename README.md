@@ -2,7 +2,8 @@
 
 A library for inverting the flow of events in React. AKA, doing the wrong thing the right way.
 
-[npm package](https://www.npmjs.com/package/downfall) [Github repo](https://github.com/samsch/downfall)
+- [npm package](https://www.npmjs.com/package/downfall)
+- [Github repo](https://github.com/samsch/downfall)
 
 ## Why
 
@@ -94,7 +95,12 @@ ReactDOM.render((
 ), element);
 ```
 
-> If you clone the repo, this example can be run with `npm run example-ticks`. There is also another example with `npm run example-click`.
+## Examples
+
+- [Codesandbox demo of the above code](https://codesandbox.io/s/vq5mnowxl0).
+- [Another example, showing nesting](https://codesandbox.io/s/q3jpy97jrw).
+
+Alternatively, if you clone the repo (and install it's dependencies with `npm i`), these examples can be run with `npm run example-ticks` and `npm run example-click`. (They are in `/example` in the repo.)
 
 ## API details
 

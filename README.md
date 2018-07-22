@@ -2,11 +2,17 @@
 
 A library for inverting the flow of events in React. AKA, doing the wrong thing the right way.
 
+[npm package](https://www.npmjs.com/package/downfall) [Github repo](https://github.com/samsch/downfall)
+
 ## Why
 
 Sometimes in React you have non-data events which need to flow down to children components. In 99.9% of cases, you should probably just make some state out of the events and pass state props down. For those .1% of cases where that just doesn't make sense though, you can use this library as a clean way for events to flow down.
 
 ## Usage
+
+### Install
+
+`npm i downfall`
 
 ### Getting an event stream
 

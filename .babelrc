@@ -1,0 +1,33 @@
+{
+  "presets": [
+    [
+      "env",
+      {
+        "targets": {
+          "browsers": [
+            "ie 11",
+            "last 2 Chrome versions",
+            "last 2 Edge versions",
+            "last 2 Firefox versions",
+            "last 2 iOS versions"
+          ]
+        },
+        "useBuiltIns": true
+      }
+    ],
+    "react"
+  ],
+  "plugins": [
+    "syntax-dynamic-import",
+    "transform-object-rest-spread"
+  ],
+  "env": {
+    "test": {
+      "presets": [["env", { "targets": { "node": "current" } }]],
+      "plugins": [
+        "dynamic-import-node",
+        "transform-object-rest-spread"
+      ]
+    }
+  }
+}

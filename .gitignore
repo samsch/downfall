@@ -1,0 +1,11 @@
+# IDE
+.idea/
+.vscode/
+
+# Misc
+node_modules
+.cache/
+package-lock.json
+
+# Dist
+dist/

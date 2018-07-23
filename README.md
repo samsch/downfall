@@ -17,10 +17,11 @@ const Child = () => (
   <Downfall onEvent={event => console.log(event)} />
 );
 
-const App = () => (
+ReactDOM.render(
   <Downfall stream={stream}>
     <Child />
-  </Downfall>
+  </Downfall>,
+  element
 );
 stream.push('Event!');
 // "Event!" will be logged by the onEvent handler.

@@ -5,6 +5,29 @@ A library for inverting the flow of events in React. AKA, doing the wrong thing 
 - [npm package](https://www.npmjs.com/package/downfall)
 - [Github repo](https://github.com/samsch/downfall)
 
+## What it does
+
+Downfall lets you push events into a stream, which will propagate down the React tree (via context), where they can be acted on by other React components.
+
+```jsx
+import { createStream, Downfall } from 'downfall';
+const stream = createStream();
+
+const Child = () => (
+  <Downfall onEvent={event => console.log(event)} />
+);
+
+const App = () => (
+  <Downfall stream={stream}>
+    <Child />
+  </Downfall>
+);
+stream.push('Event!');
+// "Event!" will be logged by the onEvent handler.
+```
+
+Any given `onEvent` listener will be called for all events pushed from ancestor Downfall components.
+
 ## Why
 
 Sometimes in React you have non-data events which need to flow down to children components. In 99.9% of cases, you should probably just make some state out of the events and pass state props down. For those .1% of cases where that just doesn't make sense though, you can use this library as a clean way for events to flow down.
